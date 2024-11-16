@@ -1,0 +1,46 @@
+.about-carousel {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-pagination-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 41px;
+    @apply bg-white-a700 text-black-900 bg-opacity-70;
+    @apply hidden sm:flex justify-between items-center;
+
+    & > div {
+      @apply container;
+    }
+
+    .swiper-pagination {
+      @apply w-full flex;
+
+      &-bullet {
+        @apply h-full flex justify-start items-center mr-10;
+
+        .progress-wrapper {
+          @apply w-full h-full relative flex items-center justify-start;
+
+          span {
+            @apply hover:cursor-pointer
+            font-arial text-[12px] leading-[20px] uppercase text-center;
+          }
+        }
+
+        &-active {
+          .progress-wrapper {
+            span {
+              @apply text-green-900 font-semibold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

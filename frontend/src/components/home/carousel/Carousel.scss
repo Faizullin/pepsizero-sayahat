@@ -1,0 +1,49 @@
+
+.home-carousel {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-pagination-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 46px;
+    @apply bg-gray-900 text-white-a700 ;
+    @apply hidden sm:flex justify-between items-center;
+
+    & > div {
+      max-width: 1200px;
+      @apply mx-auto w-full;
+    }
+
+    .swiper-pagination {
+      @apply w-full flex;
+
+      &-bullet {
+        @apply h-full flex justify-center items-center w-[240px] ;
+
+        .progress-wrapper {
+          @apply w-full h-full relative;
+          .progress-bar {
+            @apply h-0.5 w-0 absolute top-0 left-0 right-0 bg-white-a700;
+          }
+
+          span {
+            @apply w-full h-[21px] border-r-white-a700 border-r-2 hover:cursor-pointer my-2.5 px-5 flex items-center justify-center
+            font-inter font-semibold text-[12px] leading-[15px] uppercase text-center;
+          }
+
+          &:last-child {
+            span {
+              @apply border-r-0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

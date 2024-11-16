@@ -1,0 +1,30 @@
+.header {
+  @apply w-full flex items-center sm:fixed top-0 left-0 right-0 z-50 shadow-md bg-gray-300;
+
+  .mega-menu {
+
+    .mega-sub-menu {
+      @apply absolute hidden right-0 left-0 bg-green-900 z-50 w-full;
+
+      &.active {
+        @apply block;
+      }
+    }
+
+
+    .navbar-links-lists {
+      @apply hidden;
+
+      @apply sm:w-full sm:h-full sm:flex sm:justify-between;
+
+      & > ul:first-child {
+        @apply h-full flex justify-start flex-wrap;
+        // gap-[30px];
+      }
+
+      & > ul:last-child {
+        @apply h-full flex justify-end;
+      }
+    }
+  }
+}

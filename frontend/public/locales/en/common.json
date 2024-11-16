@@ -1,0 +1,58 @@
+{
+    "news1": "Q Engineering becomes #1 company in plant design",
+    "news2": "Interesting innovations in projects",
+    "introText": "Q Engineering is a recognized leader in implementing industrial projects, collaborating with clients to solve the most challenging mining industry problems and creating a legacy for future generations.",
+    "aboutUs": "About us",
+    "newsHeader": "News",
+    "careerOpportunities": "Career Opportunities",
+    "joinUs": "At Q Engineering, we are united by a common goal — to create a better world",
+    "careerText": "Join Q Engineering to work on cutting-edge projects in the mining and geological sectors, shaping the future of industry!",
+    "contacts": "Contacts",
+    "certificates": "Certificates",
+    "career": "Career",
+    "team": "Team",
+    "contactUs": "Contact Us",
+    "carousel": [
+      {
+        "title": "Effective solutions for mining project development",
+        "text": "We offer comprehensive end-to-end solutions in the mining sector, delivering meaningful results for our clients."
+      },
+      {
+        "title": "Effective solutions for mining project development 2",
+        "text": "Effective 2"
+      },
+      {
+        "title": "Effective solutions for mining project development 3",
+        "text": "Effective 3"
+      },
+      {
+        "title": "Effective solutions for mining project development 4",
+        "text": "Effective 4"
+      },
+      {
+        "title": "Effective solutions for mining project development 5",
+        "text": "Effective 5"
+      }
+    ],
+    "paginationLabels": [
+      "Geology",
+      "Mining works",
+      "Processing complexes",
+      "Environmental measures",
+      "Production automation"
+    ],
+      "services": "Services",
+      "projects": "Projects",
+      "news": "News",
+      "offices": "Offices",
+      "map": "Map",
+      "visualization3D": "3D Visualizations",
+      "blog": "Blog",
+      "socialMedia": "Social Media",
+      "other": "Other",
+      "termsOfUse": "Terms of Use",
+      "privacy": "Privacy",
+      "footerCopyright": "© 2024 Q Engineering",
+      "switchToRussian": "Russian",
+      "switchToEnglish": "English"
+  }

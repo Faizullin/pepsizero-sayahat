@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - database:/var/lib/postgresql/data/
+    env_file:
+      - .env
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - static:/app/public/static
+      - media:/app/public/media
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=backend.settings.prod
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+  redis:
+    restart: unless-stopped
+    image: redis:alpine
+    expose:
+        - 6379
+  frontend:
+      build:
+        context: ./frontend
+        dockerfile: Dockerfile.prod
+      env_file:
+        - .env
+      restart: always
+      environment:
+          - NODE_ENV=production
+      ports:
+          - 3000:3000
+  # nginx:
+  #   image: nginx
+  #   ports:
+  #       - "80:80"
+  #       - "443:443"
+  #   volumes:
+  #       # - ./nginx/conf.d:/etc/nginx/conf.d
+  #       # - /etc/letsencrypt:/etc/letsencrypt
+  #       - ./frontend-admin/dist:/app/public/static/frontend-admin/dist
+  #       - static:/app/static
+  #       - media:/app/media
+  #   depends_on:
+  #       - backend
+volumes:
+  database:
+  static:
+  media:
