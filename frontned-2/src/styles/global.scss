@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    --color-primary: #4285f4;
+    --color-secondary: #34a853;
+    --color-buttons: #fbbc05;
+    --color-typography: #ea4335;
+  }
+
+  @import "themes/theme1";
+
+}
+
+
+@layer base {
+  //* {
+  //  @apply border-border;
+  //}
+  body {
+    @apply font-normal text-black;
+    //@apply bg-background text-foreground;
+    //@apply font-aecom-sans font-normal text-[1rem] leading-[1.7];
+  }
+}
