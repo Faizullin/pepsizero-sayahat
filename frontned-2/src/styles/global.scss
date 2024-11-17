@@ -29,3 +29,64 @@
 		font-family: 'Poppins', sans-serif;
 	}
 }
+
+@keyframes slideNext {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	51% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slidePrev {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	51% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-next {
+	animation: slideNext 1s ease-in-out;
+}
+
+.animate-prev {
+	animation: slidePrev 1s ease-in-out;
+}
+
+.animate-fadeIn {
+	animation: fadeInUp 0.5s ease-out;
+}
